@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'branch_cleaner'
+puts BranchCleaner.clean()
