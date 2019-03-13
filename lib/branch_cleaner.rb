@@ -4,9 +4,13 @@ class BranchCleaner
 
   KEEP_BRANCHES_PATH = "./.keep_branches"
 
-  def self.clean()
-    branches_to_keep = Set.new ["master"]
+  def self.get_branches()
     branches = `git branch`.split("\n")
+  end
+
+  def self.clean()
+    branches = get_branches()
+    branches_to_keep = Set.new ["master"]
     for branch in branches do
       branch = branch.gsub(/^\s+/, '')
       if branch.start_with?('*') || branches_to_keep.include?(branch)
