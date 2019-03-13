@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'branch_cleaner'
   s.version     = '0.1.0'
-  s.executables << 'branch_cleaner'
+  s.executables << 'cleanbranches'
   s.licenses    = ['MIT']
   s.summary     = "This is an example!"
   s.description = "Simple gem that will delete all fully merged branches."
