@@ -53,26 +53,6 @@ describe BranchCleaner do
             end
           end
         end
-        describe "when not all branches are fully merged" do
-          # TODO
-          # describe "when the force option is not passed" do
-          #   before do
-          #     `git checkout -b test1`
-          #     `git checkout -b test2`
-          #     puts "creating and commiting testfile"
-          #     `touch testfile.txt`
-          #     `git add testfile.txt`
-          #     `git commit -m "testfile commit"`
-          #     `git checkout master`
-          #   end
-          #   it "deletes only the fully merged branches" do
-          #     branch_cleaner_length_test(3,2)
-          #   end
-          # end
-          # describe "when the force option is passed" do
-          #   #TODO
-          # end
-        end
       end
     end
   end
