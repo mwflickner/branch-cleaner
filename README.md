@@ -4,7 +4,7 @@ Simple RubyGem that will delete all fully merged branches.
 *Disclaimer: Use at your own risk. If you use this and it deletes a branch you don't want deleted, that's on you.*
 
 ## Installation
-## From RubyGems
+### From RubyGems
 You can install via [RubyGems.org](https://rubygems.org/gems/branch_cleaner)
 
 `gem install branch_cleaner`
