@@ -4,6 +4,15 @@ Simple RubyGem that will delete all fully merged branches.
 *Disclaimer: Use at your own risk. If you use this and it deletes a branch you don't want deleted, that's on you.*
 
 ## Installation
+## From RubyGems
+You can install via [RubyGems.org](https://rubygems.org/gems/branch_cleaner)
+
+`gem install branch_cleaner`
+
+Or install with a Gemfile:
+
+`gem 'branch_cleaner', '~> 0.1.0'`
+
 ### Gem From Source
 Clone the repo. Then `cd` in to the root directory of the repository and run
 
@@ -13,7 +22,6 @@ Clone the repo. Then `cd` in to the root directory of the repository and run
 
 And that's it! If you want to run the tests, just run `rake`.
 
-
 You can also install from source with a Gemfile:
 
 `gem "branch-cleaner", :git => "git://github.com/mwflickner/branch-cleaner.git"`
@@ -21,7 +29,3 @@ You can also install from source with a Gemfile:
 ## Usage
 ### Via Gem
 Usages once the gem is installed is simple, just type the command `clean_branches` in the Git repository of your choice and the gem will clean your branches.
-
-### Via Source Code
-To use from source code, move `lib/branch_cleaner.rb` into the Git repository of your choice and run
-`ruby branch_cleaner.rb`
