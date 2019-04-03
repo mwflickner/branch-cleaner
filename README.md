@@ -28,4 +28,4 @@ You can also install from source with a Gemfile:
 
 ## Usage
 ### Via Gem
-Usages once the gem is installed is simple, just type the command `cleanbranches` in the Git repository of your choice and the gem will clean your branches.
+Once the gem is installed, usages is simple, just type the command `cleanbranches` in the Git repository of your choice and the gem will clean your branches.
