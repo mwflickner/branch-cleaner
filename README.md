@@ -29,3 +29,11 @@ You can also install from source with a Gemfile:
 ## Usage
 ### Via Gem
 Once the gem is installed, usages is simple, just type the command `cleanbranches` in the Git repository of your choice and the gem will clean your branches.
+
+### Branches To Keep
+Want to have some branches omitted from the cleaning?
+Simply just create a file called `.branches_to_keep` in your repository's root directory and put the names of the branches you want omitted from the cleaning like so:
+```
+development
+staging
+```
