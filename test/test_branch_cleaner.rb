@@ -7,19 +7,36 @@ def branch_cleaner_length_test(start_length, end_length)
   BranchCleaner.get_branches().length.must_equal end_length
 end
 
+STARTING_DIRECTORY = BranchCleaner.get_current_directory().freeze
+
 describe BranchCleaner do
   before do
     # Need to make a new folder/repo eventually
+    puts 'BEGINNING SETUP'
     `git checkout master`
+    puts 'Doing an intial clean for consistency'
     BranchCleaner.clean()
+    puts 'SETUP COMPLETE'
   end
   describe "when current directory is not a git respositroy" do
-
+    before do
+      puts "Changing to repository root directory"
+      system("cd " + BranchCleaner.get_repository_root())
+      puts "Going one level above the repository"
+      `cd ..`
+    end
+    it "errors and exits" do
+      branch_count = BranchCleaner.get_branches().length
+      result = BranchCleaner.clean()
+      puts result
+      branch_cleaner_length_test(branch_count, branch_count)
+    end
+    after do
+      puts "Changing back to original directory " + STARTING_DIRECTORY
+      system("cd " + STARTING_DIRECTORY)
+    end
   end
   describe "when current directory is a git repository" do
-    describe "when the repository has no branches" do
-
-    end
     describe "when the repository has branches" do
       describe "when the only branch is master" do
         it "does not delete master" do
@@ -52,6 +69,11 @@ describe BranchCleaner do
               branch_cleaner_length_test(2, 1)
             end
           end
+        end
+        after do
+          # run one more time to clean up any extra branches
+          `git checkout master`
+          BranchCleaner.clean()
         end
       end
     end
