@@ -32,8 +32,4 @@ Once the gem is installed, usages is simple, just type the command `cleanbranche
 
 ### Branches To Keep
 Want to have some branches omitted from the cleaning?
-Simply just create a file called `.branches_to_keep` in your repository's root directory and put the names of the branches you want omitted from the cleaning like so:
-```
-development
-staging
-```
+Simply just create a file called `.branches_to_keep` in your repository's root directory and put the names of the branches you want omitted from the cleaning. Example file [here](https://github.com/mwflickner/branch-cleaner/blob/master/.example_branches_to_keep)
